@@ -607,10 +607,22 @@ var restitles = [
         var mapOptions = {
           center: new google.maps.LatLng(41.3027, 69.2779),
           zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+           mapTypeId: "OSM",
+           mapTypeControl: false,
+           streetViewControl: false
         };
         map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
+
+            //Define OSM map type pointing at the OpenStreetMap tile server
+            map.mapTypes.set("OSM", new google.maps.ImageMapType({
+                getTileUrl: function(coord, zoom) {
+                    return "http://tile.openstreetmap.org/" + zoom + "/" + coord.x + "/" + coord.y + ".png";
+                },
+                tileSize: new google.maps.Size(256, 256),
+                name: "OpenStreetMap",
+                maxZoom: 18
+            }));
 
         var infowindow = new google.maps.InfoWindow();
         markers = new Array(); // Used to store the google markers
