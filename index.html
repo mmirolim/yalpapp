@@ -7,7 +7,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> 
     <link  rel="stylesheet" href='assets/main.css' rel='stylesheet'>
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhBusebmuGMdWmP_S1_RL91G1UpIXztQc&sensor=true&libraries=visualization">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhBusebmuGMdWmP_S1_RL91G1UpIXztQc&sensor=true">
     </script>
     <script src="assets/data.js"></script>
   </head>
@@ -15,9 +15,9 @@
  <body>
     <div id="panel">
       <input class="searchtext" id="searchtext" type="text" onfocus="this.value=''"/>
+      <input type="hidden" id="lastsearch"/>
       <div id="menu">
        <span class="button" onclick="searchfortext()"">search</span>
-       <span class="button" onclick="toggleHeatmap()">toggle heatmap</span>
        <span class="button" id="btntogmarkers" onclick="togglemarkers()">hide markers</span>
        <span class="button" onclick="togglemap()">toggle map</span>
       </div>
