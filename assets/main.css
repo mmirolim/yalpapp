@@ -1,11 +1,96 @@
-html{height:100%}
-body{margin:0;padding:10px;font-family:'Open Sans',sans-serif;position:absolute;top:5px;left:0;right:20px;overflow-y:scroll;overflow-x:hidden;background-color:#f0f0f0;clear:both}
-hr{border:0;height:1px;background-image:-webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));background-image:-moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));background-image:-ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0))}
-#searchtext{background-color:white;font-family:inherit;border:1px solid #ccc;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;border-radius:2px;color:rgba(0,0,0,0.75);display:block;font-size:1.5em;margin:0 0 12px 0;padding:6px;width:99%;-webkit-transition:all .15s linear;-moz-transition:all .15s linear;-o-transition:all .15s linear;transition:all .15s linear;-moz-box-shadow:2px 3px 11px #888;-webkit-box-shadow:2px 3px 11px #888;box-shadow:2px 3px 11px #888}
-#map-canvas{height:80%;min-height:400px;-moz-box-shadow:2px 3px 11px #888;-webkit-box-shadow:2px 3px 11px #888;box-shadow:2px 3px 11px #888}
-h2{text-align:center;color:#f95e5b}
-.button{font-variant:small-caps;font-family:'Open Sans',sans-serif;width:auto;background:#2ba6cb;border:1px solid #1e728c;-webkit-box-shadow:0 1px 0 rgba(255,255,255,0.5) inset;-moz-box-shadow:0 1px 0 rgba(255,255,255,0.5) inset;box-shadow:0 1px 0 rgba(255,255,255,0.5) inset;color:white;cursor:pointer;display:inline-block;font-size:.7em;font-weight:bold;line-height:1;margin:0;padding:6px 7px 6px;position:relative;text-align:center;text-decoration:none;-webkit-transition:background-color .15s ease-in-out;-moz-transition:background-color .15s ease-in-out;-o-transition:background-color .15s ease-in-out;transition:background-color .15s ease-in-out}
-.button:hover,.button:focus{color:white;background-color:#2284a1}
-#descriptiontxt{position:relative;top:20px;background-color:white;padding:20px;margin-bottom:20px;-moz-box-shadow:2px 3px 11px #888;-webkit-box-shadow:2px 3px 11px #888;box-shadow:2px 3px 11px #888}
-strong{color:#444}
-#menu{margin-bottom:5px}
+      html { 
+        height: 100%;
+      }
+      body { 
+        margin: 0; 
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        right: 20px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: rgb(240, 240, 240);
+        clear: both;
+  }
+  hr {
+   border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+      #searchtext {
+background-color: white;
+font-family: inherit;
+border: 1px solid #cccccc;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+-ms-border-radius: 2px;
+-o-border-radius: 2px;
+border-radius: 2px;
+color: rgba(0, 0, 0, 0.75);
+display: block;
+font-size: 1.5em;
+margin: 0 0 12px 0;
+padding: 6px;
+width: 99%;
+-webkit-transition: all 0.15s linear;
+-moz-transition: all 0.15s linear;
+-o-transition: all 0.15s linear;
+transition: all 0.15s linear;
+  -moz-box-shadow: 2px 3px 11px #888;
+-webkit-box-shadow: 2px 3px 11px #888;
+box-shadow: 2px 3px 11px #888;
+      }
+      #map-canvas { 
+        height: 80%;
+        min-height: 400px;
+        -moz-box-shadow: 2px 3px 11px #888;;
+        -webkit-box-shadow: 2px 3px 11px #888;;
+        box-shadow: 2px 3px 11px #888;
+      }
+      h2 {
+      	 text-align: center;
+         color: #f95e5b;
+         }
+		.button { font-variant:small-caps;
+     font-family: 'Open Sans', sans-serif;
+     width: auto; background: #2ba6cb; border: 
+		1px solid #1e728c; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; 
+		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; 
+		color: white; cursor: pointer; display: inline-block; font-size: 0.7em; 
+		font-weight: bold; line-height: 1; margin: 0; 
+		padding: 6px 7px 6px;
+     position: relative; text-align: center; text-decoration: none; 
+		-webkit-transition: background-color 0.15s ease-in-out; -moz-transition: background-color 0.15s ease-in-out;
+		 -o-transition: background-color 0.15s ease-in-out; transition: background-color 0.15s ease-in-out;
+		  /* Hovers */ /* Sizes */ /* Colors */ /* Radii */ /* Layout */ /* Disabled ---------- */ }
+		.button:hover, .button:focus { color: white; background-color: #2284a1; }
+		/* For the "inset" look only */
+#descriptiontxt, #searchresults{
+  position:relative;
+  top:20px;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  -moz-box-shadow: 2px 3px 11px #888;
+-webkit-box-shadow: 2px 3px 11px #888;
+box-shadow: 2px 3px 11px #888;
+}
+.searchedtxt strong{
+  color: rgb(56, 114, 238);
+font-size: 0.9em;
+}
+.searchedtxt:hover {
+  cursor: pointer;
+}
+strong {
+  color:rgb(68, 68, 68);
+}
+#menu {
+  margin-bottom: 5px;
+}
+    
