@@ -13,6 +13,7 @@
         overflow-x: hidden;
         background-color: rgb(240, 240, 240);
         clear: both;
+        background-image: url('img/binding_light.png');
   }
   hr {
    border: 0;
@@ -79,6 +80,9 @@ box-shadow: 2px 3px 11px #888;
   -moz-box-shadow: 2px 3px 11px #888;
 -webkit-box-shadow: 2px 3px 11px #888;
 box-shadow: 2px 3px 11px #888;
+background-image: url('img/swirl.png');
+background-position:left top;
+background-repeat:repeat-y;
 }
 .searchedtxt strong{
   color: rgb(56, 114, 238);
