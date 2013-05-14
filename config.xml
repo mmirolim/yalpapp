@@ -6,7 +6,7 @@
         version   = "0.0.1">
 
     <!-- versionCode is optional and Android only -->
-
+    <icon src="icon.png" />
     <name>YalpApp</name>
 
     <description>
