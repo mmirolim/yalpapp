@@ -690,7 +690,7 @@ function searchfortext() {
        var searcharr = restitles[i].split("\"");
        //console.log(searcharr[1]);
             if (searcharr[1].search(str) > -1) {
-             console.log(searcharr[1]+'index:i-'+i);
+             //console.log(searcharr[1]+'index:i-'+i);
               markers[i].setVisible(true);
               var center = taxiData[i];
               // using global variable:
@@ -706,8 +706,8 @@ function searchfortext() {
 }
   function showinfo(id) {
         var i = id.getAttribute("value");
-        console.log(id);
-        console.log(parseInt(i));
+       // console.log(id);
+       // console.log(parseInt(i));
         document.getElementById("descriptiontxt").innerHTML=info[i];
   }
       google.maps.event.addDomListener(window, 'load', initialize);
