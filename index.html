@@ -4,27 +4,29 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> 
     <link  rel="stylesheet" href='assets/main.css' rel='stylesheet'>
-    <script type="text/javascript"
+                <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhBusebmuGMdWmP_S1_RL91G1UpIXztQc&sensor=true">
     </script>
-    <script src="assets/data.js"></script>
   </head>
   <title>YalpApp</title>
  <body>
     <div id="panel">
-      <input class="searchtext" id="searchtext" type="text" onfocus="this.value=''"/>
-      <input type="hidden" id="lastsearch"/>
+      <div id="topbar">
+      <input class="searchtext" id="searchtext" type="text" onfocus="this.value=''" value="Название ресторана?"/>
       <div id="menu">
-       <span class="button" onclick="searchfortext()">search</span>
-       <span class="button" id="btntogmarkers" onclick="togglemarkers()">hide markers</span>
-       <span class="button" onclick="togglemap()">toggle map</span>
+       <span class="dropdown button" id="dropdownmenu" onclick="togglemenu()">M</span>
+       <ul id="menulist">
+        <li id="btntogmarkers" onclick="togglemarkers()">hide markers</li>
+        <li onclick="togglemap()">toggle map</li>
+        </ul>
       </div>
+      <input type="hidden" id="lastsearch"/>
     </div>
     <div id="map-canvas"></div>
     <div id="searchresults"></div>
     <div id="descriptiontxt"></div>
     <div id="footer"></div>
+        <script src="assets/data.js"></script>
   </body>
 </html>

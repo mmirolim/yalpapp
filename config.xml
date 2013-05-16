@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "yalp.p304.app"
         versionCode="1" 
-        version   = "0.1">
+        version   = "0.2">
 
     <!-- versionCode is optional and Android only -->
     <icon src="icon.png" />
@@ -16,5 +16,6 @@
     <author href="" email="ch_rambler@rambler.ru">
         Simon Kamina
     </author>
+    <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
 
 </widget>
