@@ -1362,13 +1362,15 @@ function searchfortext() {
 
     // onSuccess Geolocation
     //
-    var lat,lon;
+    var lat,lon,styleMaker;
     function onSuccess(position) {
         var element = document.getElementById('geolocation');
-        lat = position.coords.latitude;
+        if (lat) {
+     	   styleMaker.setMap(null);
+        };
+   		lat = position.coords.latitude;
         lon = position.coords.longitude;
-        console.log(lat,lon);
-        var styleMaker = new StyledMarker({
+        styleMaker = new StyledMarker({
         	styleIcon:new StyledIcon(StyledIconTypes.MARKER,
         		{color:"36ff00",text:"Я"}),
         	position:new google.maps.LatLng(lat,lon),
@@ -1377,6 +1379,22 @@ function searchfortext() {
 		setTimeout(function(){ styleMaker.setAnimation(null); }, 1450);
         map.panTo(new google.maps.LatLng(lat,lon));
         togglemenu();
+        google.maps.event.addListener(styleMaker, 'click', (function(styleMaker) {
+       		return function() {
+        	infowindow.setContent('I am here');
+         	infowindow.open(map, styleMaker);
+        	var desc =document.getElementById("descriptiontxt");
+        	desc.style.display="block";
+        	desc.innerHTML ='Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          +                                   position.timestamp          + '<br />';
+        }
+      })(styleMaker));
     }
 
     // onError Callback receives a PositionError object
