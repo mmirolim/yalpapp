@@ -1367,7 +1367,16 @@ function searchfortext() {
         var element = document.getElementById('geolocation');
         lat = position.coords.latitude;
         lon = position.coords.longitude;
-        var styleMaker1 = new StyledMarker({styleIcon:new StyledIcon(StyledIconTypes.MARKER,{color:"00ff00",text:"A"}),position:new google.maps.LatLng(lat,lon),map:map});   
+        console.log(lat,lon);
+        var styleMaker = new StyledMarker({
+        	styleIcon:new StyledIcon(StyledIconTypes.MARKER,
+        		{color:"36ff00",text:"Я"}),
+        	position:new google.maps.LatLng(lat,lon),
+        	map:map});  
+        styleMaker.setAnimation(google.maps.Animation.BOUNCE);
+		setTimeout(function(){ styleMaker.setAnimation(null); }, 1450);
+        map.panTo(new google.maps.LatLng(lat,lon));
+        togglemenu();
     }
 
     // onError Callback receives a PositionError object
