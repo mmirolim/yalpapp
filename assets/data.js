@@ -1235,6 +1235,9 @@ var arrayslen = restitles.length;
         }
       })(marker, i));
     }
+    	// Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
  		 
       }
 
@@ -1302,7 +1305,6 @@ function searchfortext() {
               markers[i].setVisible(true);
               var center = taxiData[i];
               // using global variable:
-              map.panTo(center);
               foundtitles +='<span class="searchedtxt" onclick="showinfo(this)" value="'+i+'">'+restitles[i]+'</span><br/>';
               count++;
             }else if (count>1) {
@@ -1321,6 +1323,7 @@ function searchfortext() {
         searchinput.blur();
         document.getElementById("lastsearch").value =str;
         document.getElementById("descriptiontxt").style.display="none";
+        map.panTo(center);
 
 }
   function showinfo(id) {
@@ -1350,5 +1353,28 @@ function searchfortext() {
         }          
   }
 
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // onSuccess Geolocation
+    //
+    var lat,lon;
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        lat = position.coords.latitude;
+        lon = position.coords.longitude;
+        var styleMaker1 = new StyledMarker({styleIcon:new StyledIcon(StyledIconTypes.MARKER,{color:"00ff00",text:"A"}),position:new google.maps.LatLng(lat,lon),map:map});   
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+                'message: ' + error.message + '\n');
+    }
       google.maps.event.addDomListener(window, 'load', initialize);
     

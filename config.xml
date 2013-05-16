@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "yalp.p304.app"
         versionCode="1" 
-        version   = "0.2">
+        version   = "0.5">
 
     <!-- versionCode is optional and Android only -->
     <icon src="icon.png" />
