@@ -75,51 +75,11 @@ box-shadow: 2px 3px 11px #888;
 .dropdown.button {
   position: relative;
   padding-right: 2.1875em; }
-  .dropdown.button:before {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 0;
-    display: block;
-    border-style: solid;
-    border-color: white transparent transparent transparent;
-    top: 50%; }
-  .dropdown.button:before {
-    border-width: 0.5625em;
-    right: 1.5em;
-    margin-top: -0.25em; }
-  .dropdown.button:before {
-    border-color: white transparent transparent transparent; }
-  .dropdown.button.tiny {
-    padding-right: 2.1875em; }
-    .dropdown.button.tiny:before {
-      border-width: 0.4375em;
-      right: 0.875em;
-      margin-top: -0.15625em; }
-    .dropdown.button.tiny:before {
-      border-color: white transparent transparent transparent; }
-  .dropdown.button.small {
-    padding-right: 2.8125em; }
-    .dropdown.button.small:before {
-      border-width: 0.5625em;
-      right: 1.125em;
-      margin-top: -0.21875em; }
-    .dropdown.button.small:before {
-      border-color: white transparent transparent transparent; }
-  .dropdown.button.large {
-    padding-right: 4em; }
-    .dropdown.button.large:before {
-      border-width: 0.625em;
-      right: 1.75em;
-      margin-top: -0.3125em; }
-    .dropdown.button.large:before {
-      border-color: white transparent transparent transparent; }
-  .dropdown.button.secondary:before {
-    border-color: #333333 transparent transparent transparent; }
 
     #dropdownmenu {
-      color:#2ba6cb;
       line-height: 2.6em;
+      padding-right: 15px;
+      padding-left: 15px;
     }
 
     #menulist {
@@ -127,12 +87,13 @@ box-shadow: 2px 3px 11px #888;
       position: absolute;
       z-index: 1000;
       right: 8px;
-      background: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,1);
       padding: 24px;
       top: 37px;
       font-variant: small-caps;
       color: #2ba6cb;
       list-style: none;
+      font-weight: bold;
     }
     #menulist li {
       cursor: pointer;
@@ -150,6 +111,7 @@ box-shadow: 2px 3px 11px #888;
 background-position:left top;
 background-repeat:repeat-y;
 display:none;
+clear: both
 }
 .desc {
   display: none;

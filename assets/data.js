@@ -1245,6 +1245,7 @@ var arrayslen = restitles.length;
 	    } else {
 	        mapcanvas.style.display="none";
 	    }
+	    togglemenu();
       }
 
 	 function togglemenu() {
@@ -1259,20 +1260,21 @@ var arrayslen = restitles.length;
       function togglemarkers() {
         var btnstate = document.getElementById("btntogmarkers");
        // console.log(document.getElementById("btntogmarkers").value);
-        if (btnstate.value == "show") {
+        if (btnstate.value == "0") {
         for (var i=0; i<arrayslen; i++) {
             markers[i].setVisible(true);
           }
-          btnstate.value = "hide";
-           btnstate.innerHTML = "hide markers";
+          btnstate.value = "1";
+          btnstate.innerHTML = "hide markers";
         } else {
           for (var i=0; i<arrayslen; i++) {
             markers[i].setVisible(false);
           }
-          btnstate.value = "show";
+          btnstate.value = "0";
           btnstate.innerHTML = "show markers";
          // console.log(document.getElementById("btntogmarkers").value);
         }
+        togglemenu();
       }
 
       // == hides all markers of a particular category, and ensures the checkbox is cleared ==
