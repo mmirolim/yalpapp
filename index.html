@@ -12,23 +12,24 @@
   <title>YalpApp</title>
  <body>
     <div id="panel">
-      <div id="topbar">
-      <input class="searchtext" id="searchtext" type="text" onfocus="this.value=''" value="Ресторан?"/>
-      <div id="menu">
-       <span class="dropdown button" id="dropdownmenu" onclick="togglemenu()">M</span>
-       <ul id="menulist">
-        <li id="btntogmarkers" onclick="togglemarkers()" value="1">hide markers</li>
-        <li onclick="togglemap()">toggle map</li>
-        <li onclick="onDeviceReady()">where am i ?</li>
-        </ul>
-      </div>
-      <input type="hidden" id="lastsearch"/>
-    </div>
+        <input class="searchtext" id="searchtext" type="text" onfocus="this.value=''" value="Ресторан?"/>
+       <div id="menu">
+         <span class="dropdown button" id="dropdownmenu" onclick="togglemenu()">M</span>
+         <ul id="menulist">
+          <li id="btntogmarkers" onclick="togglemarkers()" value="1">hide markers</li>
+          <li onclick="togglemap();">toggle map</li>
+          <li onclick="onDeviceReady();">where am i ?</li>
+          <li id="getdir" onclick="calcRoute();">get directions</li>
+          </ul>
+       </div>
+        <input type="hidden" id="lastsearch"/>
+    </div> 
     <div id="map-canvas"></div>
     <div id="searchresults"></div>
     <div id="descriptiontxt"></div>
     <div id="footer"></div>
     <script type="text/javascript" src="assets/StyledMarker.js"></script>
     <script src="assets/data.js"></script>
+    <script src="assets/logic.js"></script>
   </body>
 </html>

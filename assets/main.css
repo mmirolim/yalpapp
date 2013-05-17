@@ -1,16 +1,21 @@
       html { 
         height: 100%;
       }
+      @font-face {
+    font-family: 'OpenSans';
+    src: url('fonts/OpenSans-Light.ttf') , 
+         url('fonts/OpenSans-Regular.ttf');
+}
       body { 
         margin: 0; 
         padding: 10px;
         position: absolute;
         top: 5px;
         left: 0px;
-        right: 20px;
+        right: 5px;
         overflow-y: scroll;
         overflow-x: hidden;
-        font-family: "Arial", Helvetica, sans-serif;
+        font-family: "OpenSans";
         background-color: rgb(240, 240, 240);
         clear: both;
         background-image: url('img/binding_light.png');
@@ -49,7 +54,7 @@ box-shadow: 2px 3px 11px #888;
       }
       #map-canvas { 
         height: 80%;
-        min-height: 400px;
+        min-height: 600px;
         -moz-box-shadow: 2px 3px 11px #888;;
         -webkit-box-shadow: 2px 3px 11px #888;;
         box-shadow: 2px 3px 11px #888;
@@ -80,23 +85,28 @@ box-shadow: 2px 3px 11px #888;
       line-height: 2.6em;
       padding-right: 15px;
       padding-left: 15px;
+      border:none;
+      font-size: 0.8em;
     }
 
     #menulist {
       display: none;
       position: absolute;
       z-index: 1000;
-      right: 8px;
+      right: 10px;
       background: rgba(255,255,255,1);
-      padding: 24px;
-      top: 37px;
+      top: 53px;
       font-variant: small-caps;
-      color: #2ba6cb;
+      color: white;
       list-style: none;
-      font-weight: bold;
+      background-color: #2ba6cb;
     }
     #menulist li {
       cursor: pointer;
+      padding: 5px 35px;
+    }
+    #menulist li:hover {
+      background-color: rgb(9, 90, 177);
     }
 		/* For the "inset" look only */
 #descriptiontxt, #searchresults{
