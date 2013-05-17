@@ -16,7 +16,7 @@
         right: 5px;
         overflow-y: scroll;
         overflow-x: hidden;
-        font-family: "OpenSans";
+        font-family: "OpenSans", sans-serif;
         background-color: rgb(240, 240, 240);
         clear: both;
         background-image: url('img/binding_light.png');
