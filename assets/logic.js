@@ -10,13 +10,28 @@ var arrayslen = restitles.length;
         if (e.keyCode === 13) {
             searchfortext();
         } }
-        var mapOptions = {
-          center: new google.maps.LatLng(41.3027, 69.2779),
-          zoom: 12,
-           mapTypeId: "OSM",
-           mapTypeControl: false,
-           streetViewControl: false
-        };
+       
+        /*
+            Build list of map types.
+            You can also use var mapTypeIds = ["roadmap", "satellite", "hybrid", "terrain", "OSM"]
+            but static lists sucks when google updates the default list of map types.
+         */
+            var mapTypeIds = [];
+            for(var type in google.maps.MapTypeId) {
+                mapTypeIds.push(google.maps.MapTypeId[type]);
+            }
+            mapTypeIds.push("OSM");
+
+            var mapOptions = {
+              center: new google.maps.LatLng(41.3027, 69.2779),
+              zoom: 12,
+               mapTypeId: "OSM",
+               streetViewControl: false,
+               mapTypeControlOptions: {
+                    mapTypeIds: mapTypeIds
+                }
+            };
+
         map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
         directionsDisplay.setMap(map);
