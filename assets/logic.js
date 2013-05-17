@@ -56,13 +56,13 @@ var arrayslen = restitles.length;
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
        		return function() {
-        	infowindow.setContent(restitles[i]);
+        	infowindow.setContent('<a href="#desc" class="desclink">'+restitles[i]+'</a>');
          	infowindow.open(map, marker);
         	var desc =document.getElementById("descriptiontxt");
           desc.value = taxiData[i].toString();
           console.log(desc.value);
         	desc.style.display ="block";
-        	desc.innerHTML = info[i];
+        	desc.innerHTML = '<a name="desc"></a>'+info[i];
         }
       })(marker, i));
     }
@@ -163,7 +163,7 @@ function searchfortext() {
        // console.log(parseInt(i));
       	map.panTo(taxiData[i]);
     	desc.style.display="block";
-        desc.innerHTML=info[i];
+        desc.innerHTML='<a name="desc"></a>'+info[i];
         if (marker.getAnimation() != null) {
 		    markers[i].setAnimation(null);
 		} else {

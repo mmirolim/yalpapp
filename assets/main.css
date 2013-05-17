@@ -21,6 +21,12 @@
         clear: both;
         background-image: url('img/binding_light.png');
   }
+  strong {
+    font-weight: bold;
+  }
+  .desclink {
+    text-decoration: none;
+  }
   hr {
    border: 0;
     height: 1px;
