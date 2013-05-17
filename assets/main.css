@@ -4,6 +4,7 @@
       @font-face {
     font-family: 'OpenSans';
     src: url('fonts/OpenSans-Light.ttf') , 
+         url('fonts/OpenSans-Bold.ttf') ,
          url('fonts/OpenSans-Regular.ttf');
 }
       body { 
