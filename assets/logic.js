@@ -167,6 +167,7 @@ function searchfortext() {
         if (marker.getAnimation() != null) {
 		    markers[i].setAnimation(null);
 		} else {
+        markers[i].setVisible(true);
 		    markers[i].setAnimation(google.maps.Animation.BOUNCE);
 		    setTimeout(function(){ markers[i].setAnimation(null); }, 1450);
 		}
