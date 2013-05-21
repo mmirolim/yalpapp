@@ -254,20 +254,5 @@ function searchfortext() {
         togglemenu();
       }
 
-       document.addEventListener("backbutton", function () { 
-              navigator.notification.confirm(
-                        'Do you want to quit', 
-                        onConfirmQuit, 
-                        'Exit', 
-                        'OK,Cancel'  
-                    );
-            }, true); 
-
-
-    function onConfirmQuit(button){
-       if(button == "1"){
-        navigator.app.exitApp(); 
-    }
-    }
 
       google.maps.event.addDomListener(window, 'load', initialize);
